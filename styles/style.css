@@ -8,20 +8,21 @@ html, body {
     font-size: 16px;
     color: #4a4a4a;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
 }
 
 #wraper {
-    padding: 20px;
+    padding: 20px 100px;
     width: 100%;
     background-color: #f7f7f7;
 }
-#header, #marketing-chanel, #form-to-talk, #feature {
+#header-section, #marketing-section, #form-section, #features-section {
     width: 100%;
     text-align: center;
     margin: 50px auto;
 }
 
-#header .caption {
+.header-caption {
     max-width: 700px;
     margin: 0 auto;
 }
@@ -43,7 +44,7 @@ html, body {
   .form-inline input {
     vertical-align: middle;
     margin: 5px 20px 15px 0;
-    padding: 10px;
+    padding: 15px;
     min-width: 300px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -58,12 +59,74 @@ html, body {
     font-weight: bold;
     font-size: 1em;
     border-radius: 5px;
+    margin-top: 1em;
   }
 
 .feature-title {
     margin-bottom: .5em;
 }
+.feature-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 50px;
+}
+.marketer-title, .developer-title {
+    padding: 10px;
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+    margin: 0 auto;
+    border-radius: 8px 8px 0 0;
+}
+.marketer-title {
+    background-color: #ff9700;
+}
+.developer-title {
+    background-color: #593adb;
+}
+.marketer-feature {
+    background-color: white;
+    border-radius: 8px 0 0 8px;
+    padding: 30px 0 30px 30px;
+}
+.developer-feature {
+    background-color: white;
+    border-radius: 0 8px 8px 0;
+    padding: 30px 30px 30px 15px;
+}
+.marketer-items, .developer-items {
+    text-align: left;
+    padding: 20px;
+}
+.marketer-items {
+    border-right: 3px solid lightgray;
+    padding-right: 35px;
+}
+.feature-item:not(:last-child) {
+    margin-bottom: 50px;
+}
+.feature-item-image {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+}
+.item-description {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+.border-button {
+    padding: 10px 50px;
+    border-radius: 3px;
+    border: 2px solid #ff9700;
+    background-color: white;
+    color:  #ff9700;
+    font-weight: bold;
+}
+
 @media (max-width: 640px) and (min-width: 320px) {
+    #wraper {
+        padding: 20px 20px;
+    }
     .form-inline input {
         margin: 10px 0;
       }
@@ -72,4 +135,19 @@ html, body {
         flex-direction: column;
         align-items: stretch;
       }
+
+      .feature-grid {
+        grid-template-columns: auto;
+        row-gap: 20px;
+    }
+    .marketer-feature {
+        border-radius: 8px 8px 8px 8px;
+        padding: 0;
+    }
+    .developer-feature {
+        border-radius: 8px 8px 8px 8px;
+    }
+    .marketer-items {
+        border-right: none;
+    }
 }
