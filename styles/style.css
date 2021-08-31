@@ -1,8 +1,31 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/* Scrollbar Custom */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 html, body {
     font-size: 16px;
@@ -88,13 +111,13 @@ html, body {
     border-radius: 8px;
     padding: 20px;
 }
+.table-scroll {
+    max-height: 450px;
+    overflow-y: auto;
+}
 .row {
     display: flex;
     width: 100%;
-}
-.table-scroll {
-    max-height: 500px;
-    overflow-y: auto;
 }
 .channel-item {
     width: 31.5%;
@@ -102,12 +125,24 @@ html, body {
     padding: 5px;
     color: #ff9700;
     font-weight: bold;
+    cursor: pointer;
+}
+.channel-sub-item {
+    width: 31.5%;
+    text-align: left;
+    padding: 7.5px 30px;
+    color: #4a4a4a;
+    font-weight: 500;
 }
 .check-item {
     width: 21%;
     border-left: 2px solid gray;
     padding: 5px;
     margin: 0 7.5px;
+    font-weight: bold;
+}
+.icofont-circled-right {
+    margin-right: 10px;
 }
 .orange {
     color: #ff9700;
@@ -120,6 +155,16 @@ html, body {
 }
 .pasive {
     opacity: .1;
+}
+.rotate {
+    display: inline-block;
+    transform: rotate(90deg);
+}
+.collapsible {
+    display: none;
+}
+.open {
+    display: block;
 }
 
 .form-inline {  
