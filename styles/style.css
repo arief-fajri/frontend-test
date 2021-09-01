@@ -255,25 +255,45 @@ p {
 .item2{grid-area: developer;}
 .item3{
     grid-area: marketer1;
-    border-right: 3px solid lightgray;
     border-radius: 8px 0 0 0;
     box-shadow: -5px 10px 15px -5px #afafaf;
+    position: relative;
+}
+.item3:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 20px);
+    bottom: 0;
+    right: 0;
+    border-right: 3px solid lightgray;
 }
 .item4{
     grid-area: developer1;
     border-radius: 0 8px 0 0;
     box-shadow: 5px 10px 15px -5px #afafaf;
+    position: relative;
 }
 .item5{
     grid-area: marketer2;
-    border-right: 3px solid lightgray;
     border-radius: 0 0 0 8px;
     box-shadow: -5px 10px 15px -5px #afafaf;
+    position: relative;
+}
+.item5:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 20px);
+    top: 0;
+    right: 0;
+    border-right: 3px solid lightgray;
 }
 .item6{
     grid-area: developer2;
     border-radius: 0 0 8px 0;
     box-shadow: 5px 10px 15px -5px #afafaf;
+    position: relative;
 }
 .feature-item-image {
     width: 100%;
@@ -405,18 +425,18 @@ p {
         margin-top: 20px;
     }
     .item3 {
-        border: none;
         box-shadow: 0 10px 15px #afafaf;
         border-radius: 8px 8px 0 0;
     }
     .item5 {
-        border: none;
         box-shadow: 0 15px 15px #afafaf;
         border-radius: 0 0 8px 8px;
     }
+    .item3:after, .item5:after {border: none;}
     .item4 {
         box-shadow: 0 10px 15px #afafaf;
         border-radius: 8px 8px 0 0;
+        margin-top: -5px;
     }
     .item6 {
         box-shadow: 0 17px 15px #afafaf;
