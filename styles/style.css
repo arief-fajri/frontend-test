@@ -110,7 +110,7 @@ p {
     color: white;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     font-size: 14px;
 }
@@ -139,6 +139,7 @@ p {
     color:  white;
     font-weight: bold;
     margin-top: 1em;
+    cursor: pointer;
 }
 
 .marketing-mobile-header, .channel-mobile, .marketing-mobile-legend {
@@ -381,6 +382,7 @@ p {
         font-size: 10px;
         font-weight: bold;
         margin-top: 10px;
+        cursor: pointer;
     }
     .profesional-mobile, .profesional-mobile-button{background-image: radial-gradient(#8a8a8a, #5c5b5b);}
     .business-mobile, .business-mobile-button{background-image: radial-gradient(#6444e4, #3f20b9);}
