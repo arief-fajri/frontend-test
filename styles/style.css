@@ -42,8 +42,9 @@ p {
 
 .icofont-circled-right, .icofont-ui-press {
     margin-right: 10px;
+    display: inline-block;
 }
-.icofont-thin-down {
+.icofont-rounded-down {
     display: none;
 }
 
@@ -84,9 +85,9 @@ p {
     padding: 0 30px 0 20px;
     display: grid;
     grid-template-columns: 2fr repeat(3, 1fr);
+    gap: 5px;
 }
 .profesional, .business, .enterprise{
-    margin: 0 5px;
     padding: 10px;
     border-radius: 10px 10px 0 0;
     color: white;
@@ -113,7 +114,7 @@ p {
 .business {background-image: url(../images/business.png);}
 .enterprise {background-image: url(../images/enterprise.png);}
 .border-button-marketing {
-    padding: 10px;
+    padding: 7px;
     width: 80%;
     border-radius: 3px;
     border: 1px solid white;
@@ -176,7 +177,6 @@ p {
     opacity: .1;
 }
 .rotate {
-    display: inline-block;
     transform: rotate(90deg);
 }
 .collapsible {
@@ -303,7 +303,7 @@ p {
     #header-section, #marketing-section, #form-section, #features-section {
         margin: 50px auto;
     }
-    .icofont-thin-down {
+    .icofont-rounded-down {
         display: inline-block;
     }
     .icofont-circled-right {
@@ -339,7 +339,6 @@ p {
         font-weight: bold;
         margin-top: 10px;
     }
-    .channel-blank-mobile{width: 35%;}
     .profesional-mobile, .profesional-mobile-button{background-color: #4a4a4a;}
     .business-mobile, .business-mobile-button{background-color: #593adb;}
     .enterprise-mobile, .enterprise-mobile-button{background-color: #ff9700;}
@@ -405,12 +404,24 @@ p {
     .item2 {
         margin-top: 20px;
     }
-    .item3, .item5 {
+    .item3 {
         border: none;
         box-shadow: 0 10px 15px #afafaf;
+        border-radius: 8px 8px 0 0;
     }
-    .item4, .item6 {
+    .item5 {
+        border: none;
+        box-shadow: 0 15px 15px #afafaf;
+        border-radius: 0 0 8px 8px;
+    }
+    .item4 {
         box-shadow: 0 10px 15px #afafaf;
+        border-radius: 8px 8px 0 0;
+    }
+    .item6 {
+        box-shadow: 0 17px 15px #afafaf;
+        border-radius: 0 0 8px 8px;
+        margin-top: -5px;
     }
     /* FEATURE SECTION END */
 
