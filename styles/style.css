@@ -49,16 +49,15 @@ p {
 }
 
 #container {
-    display: flex;
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    justify-content: center;
 }
 #wraper {
     width: 100%;
     max-width: 1200px;
     padding: 15px;
+    margin: 0 auto;
 }
 #header-section, #marketing-section, #form-section, #features-section {
     width: 100%;
@@ -241,10 +240,10 @@ p {
     border-radius: 8px 8px 0 0;
 }
 .marketer-title {
-    background-color: #ff9700;
+    background-image: radial-gradient(#ffa826, #ee9002);
 }
 .developer-title {
-    background-color: #593adb;
+    background-image: radial-gradient(#6444e4, #3f20b9);
 }
 .feature-item {
     text-align: left;
@@ -359,9 +358,9 @@ p {
         font-weight: bold;
         margin-top: 10px;
     }
-    .profesional-mobile, .profesional-mobile-button{background-color: #4a4a4a;}
-    .business-mobile, .business-mobile-button{background-color: #593adb;}
-    .enterprise-mobile, .enterprise-mobile-button{background-color: #ff9700;}
+    .profesional-mobile, .profesional-mobile-button{background-image: radial-gradient(#8a8a8a, #5c5b5b);}
+    .business-mobile, .business-mobile-button{background-image: radial-gradient(#6444e4, #3f20b9);}
+    .enterprise-mobile, .enterprise-mobile-button{background-image: radial-gradient(#ffa826, #ee9002);}
     .channel-mobile {
         display: block;
         font-size: 2em;
@@ -381,10 +380,11 @@ p {
        background-color: #ff9700;
        color: white;
        border-radius: 5px;
-       padding: 10px 5px;
-       margin-right: 10px;
+       padding: 5px;
+       margin-right: 5px;
        display: flex;
        justify-content: space-between;
+       align-items: center;
     }
     .channel-sub-item {
         padding: 7.5px;

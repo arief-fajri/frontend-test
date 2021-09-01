@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div id="marketing-section">
-                
+
                 <div class="channel-mobile">Marketing Channel</div>
                 <div class="marketing-mobile-header">
                     <div class="channel-blank-mobile"></div>
@@ -37,7 +37,7 @@
                     <div class="business-mobile">B</div>
                     <div class="enterprise-mobile">E</div>
                 </div>
-                
+
                 <div class="marketing-header">
                     <div class="channel"><span>Marketing Channel</span></div>
                     <div class="profesional">
@@ -59,7 +59,8 @@
                 <div class="marketing-table">
                     <div class="table-scroll">
                         <div class="row">
-                            <div class="channel-item" data-list="1"><i class="icofont-circled-right rotate"></i>Email <i class="icofont-rounded-down rotate"></i></div>
+                            <div class="channel-item" data-list="1"><i class="icofont-circled-right rotate"></i>Email <i
+                                    class="icofont-rounded-down rotate"></i></div>
                             <div class="check-item"><i class="icofont-verification-check black"></i></div>
                             <div class="check-item"><i class="icofont-verification-check blue"></i></div>
                             <div class="check-item"><i class="icofont-verification-check orange"></i></div>
@@ -184,7 +185,8 @@
                         </div>
 
                         <div class="row">
-                            <div class="channel-item" data-list="4"><i class="icofont-circled-right"></i>Dynamic Banner <i class="icofont-rounded-down"></i>
+                            <div class="channel-item" data-list="4"><i class="icofont-circled-right"></i>Dynamic Banner
+                                <i class="icofont-rounded-down"></i>
                             </div>
                             <div class="check-item"><i class="icofont-verification-check black pasive"></i></div>
                             <div class="check-item"><i class="icofont-verification-check blue pasive"></i></div>
@@ -212,7 +214,8 @@
                         </div>
 
                         <div class="row">
-                            <div class="channel-item" data-list="5"><i class="icofont-circled-right"></i>Whatsapp <i class="icofont-rounded-down"></i></div>
+                            <div class="channel-item" data-list="5"><i class="icofont-circled-right"></i>Whatsapp <i
+                                    class="icofont-rounded-down"></i></div>
                             <div class="check-item"><i class="icofont-verification-check black pasive"></i></div>
                             <div class="check-item"><i class="icofont-verification-check blue pasive"></i></div>
                             <div class="check-item"><i class="icofont-verification-check orange"></i></div>
@@ -247,9 +250,9 @@
                     <div class="enterprise-mobile-button">Request Demo</div>
                 </div>
                 <div class="marketing-mobile-legend">
-                    <div ><i class="icofont-ui-press black"></i>Profesional</div>
-                    <div ><i class="icofont-ui-press blue"></i>Business</div>
-                    <div ><i class="icofont-ui-press orange"></i>Enterprise</div>
+                    <div><i class="icofont-ui-press black"></i>Profesional</div>
+                    <div><i class="icofont-ui-press blue"></i>Business</div>
+                    <div><i class="icofont-ui-press orange"></i>Enterprise</div>
                 </div>
             </div>
             <div id="form-section">
@@ -312,7 +315,15 @@
         </div>
     </div>
     <script src="styles/jquery.js"></script>
-    <script src="styles/style.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".channel-item").click(function () {
+                var list = $(this).data("list");
+                $(this).children("i").toggleClass("rotate");
+                $("#extend-" + list).toggleClass("open");
+            });
+        });
+    </script>
 </body>
 
 </html>
