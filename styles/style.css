@@ -7,25 +7,26 @@
 /* Scrollbar Custom */
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
+    width: 7.5px;
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+/* Track */
+::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 10px;
-  }
+}
    
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #888; 
     border-radius: 10px;
-  }
+}
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: #555; 
-  }
+}
+/* Scrollbar Custom End */
 
 html, body {
     font-size: 16px;
@@ -35,6 +36,14 @@ html, body {
     overflow-x: hidden;
     background-color: #f7f7f7;
 }
+p {
+    line-height: 1.5;
+}
+
+.icofont-circled-right, .icofont-ui-press {
+    margin-right: 10px;
+}
+
 #container {
     display: flex;
     width: 100%;
@@ -44,13 +53,15 @@ html, body {
 }
 #wraper {
     max-width: 1200px;
+    padding: 25px;
 }
 #header-section, #marketing-section, #form-section, #features-section {
     width: 100%;
     text-align: center;
-    margin: 50px auto;
+    margin: 100px auto;
 }
 
+/* HEADER SECTION */
 .header-caption {
     max-width: 700px;
     margin: 0 auto;
@@ -62,7 +73,9 @@ html, body {
 .header-description {
     font-weight: bold;
 }
+/* HEADER SECTION END*/
 
+/* MARKETING SECTION */
 .marketing-header {
     display: flex;
     align-items: flex-end;
@@ -105,6 +118,41 @@ html, body {
     font-weight: bold;
     margin-top: 1em;
 }
+
+.marketing-mobile-header {
+    display: none;
+    align-items: flex-end;
+    padding-left: 20px;
+}
+.marketing-mobile-legend {
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+.channel-mobile {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    margin-bottom: 50px;
+    text-align: center;
+    display: none;
+}
+.profesional-mobile, .business-mobile, .enterprise-mobile {
+    margin: 0 5px;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    width: 15%;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+.channel-blank-mobile{width: 35%;}
+.profesional-mobile{background-color: #4a4a4a;}
+.business-mobile{background-color: #593adb;}
+.enterprise-mobile{background-color: #ff9700;}
+
 .marketing-table {
     width: 100%;
     background-color: white;
@@ -130,7 +178,7 @@ html, body {
 .channel-sub-item {
     width: 31.5%;
     text-align: left;
-    padding: 7.5px 30px;
+    padding: 7.5px 0 7.5px 30px;
     color: #4a4a4a;
     font-weight: 500;
 }
@@ -139,10 +187,7 @@ html, body {
     border-left: 2px solid gray;
     padding: 5px;
     margin: 0 7.5px;
-    font-weight: bold;
-}
-.icofont-circled-right {
-    margin-right: 10px;
+    font-size: 12px;
 }
 .orange {
     color: #ff9700;
@@ -166,27 +211,28 @@ html, body {
 .open {
     display: block;
 }
+/* MARKETING SECTION END */
 
+/* FORM SECTION */
 .form-inline {  
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-  }
-  .form-inline input {
+}
+.form-inline input {
     vertical-align: middle;
     flex-grow: 1;
     padding: 15px;
-    min-width: 300px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-  }
-  .form-inline input:not(:last-child) {
-      margin-right: 20px;
-  }
-  .form-button {
+}
+.form-inline input:not(:last-child) {
+    margin-right: 20px;
+}
+.form-button {
     padding: 10px 20px;
     background-color: #ff9700;
     border: 1px solid #ddd;
@@ -196,15 +242,21 @@ html, body {
     font-size: 1em;
     border-radius: 5px;
     margin-top: 1em;
-  }
+}
+/* FORM SECTION END*/
 
+/* FEATURE SECTION */
 .feature-title {
     margin-bottom: .5em;
 }
 .feature-grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-areas: 
+    'marketer developer'
+    'marketer1 developer1'
+    'marketer2 developer2';
     margin-top: 50px;
+
 }
 .marketer-title, .developer-title {
     padding: 10px;
@@ -220,30 +272,39 @@ html, body {
 .developer-title {
     background-color: #593adb;
 }
-.marketer-feature {
-    background-color: white;
-    border-radius: 8px 0 0 8px;
-    padding: 30px 0 30px 30px;
-}
-.developer-feature {
-    background-color: white;
-    border-radius: 0 8px 8px 0;
-    padding: 30px 30px 30px 15px;
-}
-.marketer-items, .developer-items {
+.feature-item {
     text-align: left;
-    padding: 20px;
+    padding: 35px;
+    background-color: white;
 }
-.marketer-items {
+.item1{grid-area: marketer;}
+.item2{grid-area: developer;}
+.item3{
+    grid-area: marketer1;
     border-right: 3px solid lightgray;
-    padding-right: 35px;
+    border-radius: 8px 0 0 0;
+    box-shadow: -5px 10px 15px -5px #afafaf;
 }
-.feature-item:not(:last-child) {
-    margin-bottom: 50px;
+.item4{
+    grid-area: developer1;
+    border-radius: 0 8px 0 0;
+    box-shadow: 5px 10px 15px -5px #afafaf;
+}
+.item5{
+    grid-area: marketer2;
+    border-right: 3px solid lightgray;
+    border-radius: 0 0 0 8px;
+    box-shadow: -5px 10px 15px -5px #afafaf;
+}
+.item6{
+    grid-area: developer2;
+    border-radius: 0 0 8px 0;
+    box-shadow: 5px 10px 15px -5px #afafaf;
 }
 .feature-item-image {
     width: 100%;
-    height: 300px;
+    max-height: 300px;
+    height: auto;
     margin-bottom: 30px;
 }
 .item-description {
@@ -258,29 +319,74 @@ html, body {
     color:  #ff9700;
     font-weight: bold;
 }
+/* FEATURE SECTION END*/
 
 @media (max-width: 640px) and (min-width: 320px) {
+    html, body {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    #header-section, #marketing-section, #form-section, #features-section {
+        margin: 50px auto;
+    }
+    /* MARKETING SECTION */
+    .marketing-mobile-header, .marketing-mobile-legend {
+        display: flex;
+    }
+    .channel-mobile {
+        display: block;
+    }
+    .marketing-header {
+        display: none;
+    }
+    .channel-item i {
+        display: none;
+    }
+    .channel-item, .channel-sub-item {
+        width: 40%;
+    }
+    .channel-sub-item {
+        padding: 7.5px;
+    }
+    
+    .check-item {
+        width: 20%;
+        margin: 0;
+    }
+    /* MARKETING SECTION END */
+
+    /* FORM SECTION */
     .form-inline input {
-        margin: 10px 0;
+        margin: 5px 0;
       }
-      
-      .form-inline {
+      .form-inline input:not(:last-child) {
+        margin-right: 0;
+    }
+    .form-inline {
         flex-direction: column;
         align-items: stretch;
-      }
-
-      .feature-grid {
-        grid-template-columns: auto;
-        row-gap: 20px;
     }
-    .marketer-feature {
-        border-radius: 8px 8px 8px 8px;
-        padding: 0;
+    /* MARKETING SECTION END*/
+    
+    /* FEATURE SECTION */
+    .feature-grid {
+        grid-template-areas: 
+        'marketer'
+        'marketer1'
+        'marketer2'
+        'developer'
+        'developer1'
+        'developer2';
     }
-    .developer-feature {
-        border-radius: 8px 8px 8px 8px;
+    .item2 {
+        margin-top: 20px;
     }
-    .marketer-items {
-        border-right: none;
+    .item3, .item5 {
+        border: none;
+        box-shadow: 0 10px 15px #afafaf;
     }
+    .item4, .item6 {
+        box-shadow: 0 10px 15px #afafaf;
+    }
+    /* FEATURE SECTION END */
 }
