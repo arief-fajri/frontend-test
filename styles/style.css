@@ -288,7 +288,7 @@ p {
 .item3:after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 5px;
     height: calc(100% - 20px);
     bottom: 0;
     right: 0;
@@ -307,7 +307,7 @@ p {
 .item5:after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 5px;
     height: calc(100% - 20px);
     top: 0;
     right: 0;
@@ -334,6 +334,7 @@ p {
     background-color: white;
     color:  #ff9700;
     font-weight: bold;
+    cursor: pointer;
 }
 /* FEATURE SECTION END*/
 
